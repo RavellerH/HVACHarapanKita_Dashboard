@@ -54,6 +54,13 @@ function updateInfoValue() {
       document.getElementById("fanValue").textContent = fanValue;
       const unitstatValue = data[0].UnitStatus;
       document.getElementById("unitstatValue").textContent = unitstatValue;
+      if (unitstatValue === "ON") {
+        document.getElementById("btn_ON").style.backgroundColor = "lime";
+        document.getElementById("btn_OFF").style.backgroundColor = "gray";
+      } else {
+        document.getElementById("btn_ON").style.backgroundColor = "gray";
+        document.getElementById("btn_OFF").style.backgroundColor = "orangered";
+      }
     });
 }
 updateInfoValue();
@@ -233,7 +240,7 @@ setInterval(updateGaugeValue, 5000); // Refresh every 5 seconds (adjust as neede
 
 let chartraw = new JustGage({
   id: "gauRaw",
-  value: 24,
+  value: 0,
   valueFontColor: "aliceblue",
   min: 0,
   max: 50,
@@ -263,10 +270,10 @@ let chartraw = new JustGage({
 
 let chartraww = new JustGage({
   id: "gauRaww",
-  value: 50,
+  value: 0,
   valueFontColor: "aliceblue",
-  min: 0,
-  max: 85,
+  min: 40,
+  max: 70,
   hideMinMax: true,
   title: "Relative Humidity",
   titleFontColor: "aliceblue",
@@ -293,7 +300,7 @@ let chartraww = new JustGage({
 
 let chartraw1 = new JustGage({
   id: "gauRaw1",
-  value: 24,
+  value: 0,
   valueFontColor: "aliceblue",
   min: 0,
   max: 50,
@@ -323,10 +330,10 @@ let chartraw1 = new JustGage({
 
 let chartraww2 = new JustGage({
   id: "gauRaww2",
-  value: 75,
+  value: 0,
   valueFontColor: "aliceblue",
   min: 40,
-  max: 80,
+  max: 70,
   hideMinMax: true,
   title: "Relative Humidity",
   titleFontColor: "aliceblue",
@@ -353,7 +360,7 @@ let chartraww2 = new JustGage({
 
 let chartfm1 = new JustGage({
   id: "gaufm1",
-  value: 150,
+  value: 0,
   valueFontColor: "aliceblue",
   min: 125,
   max: 175,
@@ -384,7 +391,7 @@ let chartfm1 = new JustGage({
 
 let chartfm2 = new JustGage({
   id: "gaufm2",
-  value: 150,
+  value: 0,
   valueFontColor: "aliceblue",
   min: 125,
   max: 175,
@@ -413,7 +420,7 @@ let chartfm2 = new JustGage({
 
 let chartfm3 = new JustGage({
   id: "gaufm3",
-  value: 150,
+  value: 0,
   valueFontColor: "aliceblue",
   min: 125,
   max: 175,
@@ -600,6 +607,25 @@ function verifyPassword() {
     );
     closeModal(); // Close the modal if password is correct
     document.getElementById("passwordInput").value = ""; // Reset password input
+    let stat = 0;
+    if (modalstatus === "ON") {
+      stat = 1;
+    } else {
+      stat = 0;
+    }
+    fetch(`http://` + config + `:1880/setUnitStat?value=${stat}`)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        console.log(" updated successfully:", data);
+      })
+      .catch((error) => {
+        console.error("There was a problem updating :", error);
+      });
   } else {
     alert("Incorrect password. Please try again.");
     document.getElementById("passwordInput").value = ""; // Reset password input
