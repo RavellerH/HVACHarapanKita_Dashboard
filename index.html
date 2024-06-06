@@ -54,19 +54,23 @@
                                 <td id="sleepValue">Loading data...</td>
                             </tr>
                             <tr>
-                                <th style="text-align: left;">Timer ON 1:___</th>
+                                <th style="text-align: left;">Timer ON
+                                    1:___</th>
                                 <td id="timeron1Value">Loading data...</td>
                             </tr>
                             <tr>
-                                <th style="text-align: left;">Timer ON 2:___</th>
+                                <th style="text-align: left;">Timer ON
+                                    2:___</th>
                                 <td id="timeron2Value">Loading data...</td>
                             </tr>
                             <tr>
-                                <th style="text-align: left;">Timer OFF 1:__</th>
+                                <th style="text-align: left;">Timer OFF
+                                    1:__</th>
                                 <td id="timeroff1Value">Loading data...</td>
                             </tr>
                             <tr>
-                                <th style="text-align: left;">Timer OFF 2:__</th>
+                                <th style="text-align: left;">Timer OFF
+                                    2:__</th>
                                 <td id="timeroff2Value">Loading data...</td>
                             </tr>
                             <tr>
@@ -104,7 +108,7 @@
                 <!-- PRODUCT WATER -->
                 <div
                     class="block bg-white w-1/3 mx-[1.4vw] h-[16vh] rounded-md"
-                    style="width: 25vw; border-width: 1px; border-color: aqua;">
+                    style="width: 25vw; border-width: 3px; border-color: aqua;">
                     <div class="card-header">
                         <h1 class="tittle-product mx-auto"
                             style="color: azure; font-size: 2vh; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Outdoor
@@ -114,14 +118,14 @@
                     </div>
                     <h1 id="OutdoorUnit"
                         class="val-product"
-                        style="text-align: center; font-size: xx-large;">ON</h1>
+                        style="text-align: center; font-size: xx-large;">...</h1>
 
                 </div>
 
                 <!-- PRODUCT WATER 1 -->
                 <div
                     class="block bg-white w-1/3 mr-[1.4vw] h-[16vh] rounded-md"
-                    style="width: 25vw; border-width: 1px; border-color: aqua;">
+                    style="width: 25vw; border-width: 3px; border-color: aqua;">
                     <div class="card-header">
                         <h1 class="tittle-product mx-auto"
                             style="color: azure; font-size: 2vh; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Air
@@ -131,7 +135,7 @@
                     </div>
                     <h1 id="AHU"
                         class="val-product"
-                        style="text-align: center; font-size: xx-large;">ON</h1>
+                        style="text-align: center; font-size: xx-large;">...</h1>
                     <!-- <h1 class="note-product">
                         <span id="diffTPW1" class="text-green-500">+0.00</span>
                         Since yesterday
@@ -141,7 +145,7 @@
                 <!-- PRODUCT WATER 2 -->
                 <div
                     class="block bg-white w-1/3 mr-[1.4vw] h-[16vh] rounded-md"
-                    style="width: 25vw; border-width: 1px; border-color: aqua;">
+                    style="width: 25vw; border-width: 3px; border-color: aqua;">
                     <div class="card-header">
                         <h1 class="tittle-product mx-auto"
                             style="color: azure; font-size: 2vh; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">AIR
@@ -151,7 +155,7 @@
                     </div>
                     <div class="flex justify-around items-center mt-4">
                         <button
-                            onclick="openModal('ON')"
+                            onclick="openModal('ON')" id="btn_ON"
                             class="btn-submit-1"
                             style="background-color: azure; width: 7vw; height: 7vh; margin: auto; margin-top: 1vh; display: flex; justify-content: center; align-items: center;transition: background-color 0.7s ease-in-out;">
                             <i class="bx bx-power-off bx-md"
@@ -160,7 +164,7 @@
                                 style="color: rgb(3, 39, 39); font-size: 3vh; font-weight: 600; margin-right: 0.2rem;">ON</span>
                         </button>
 
-                        <button onclick="openModal('OFF')"
+                        <button onclick="openModal('OFF')" id="btn_OFF"
                             class="btn-submit-1"
                             style="background-color: azure; width: 7vw; height: 7vh; margin: auto; margin-top: 1vh; display: flex; justify-content: center; align-items: center;transition: background-color 0.7s ease-in-out;">
                             <i class="bx bx-power-off bx-md"
@@ -170,7 +174,7 @@
                         </button>
                         <button onclick="openModalinfo()"
                             class="btn-submit-1"
-                            style="background-color: azure; width: 7vw; height: 7vh; margin: auto; margin-top: 1vh; display: flex; justify-content: center; align-items: center;transition: background-color 0.7s ease-in-out;">
+                            style="background-color: azure; width: 5vw; height: 7vh; margin: auto; margin-top: 1vh; display: flex; justify-content: center; align-items: center;transition: background-color 0.7s ease-in-out;">
                             <i class="bx bx-info-circle bx-md"
                                 style="color: black; margin-right: 0.0rem;"></i>
 
@@ -203,7 +207,7 @@
 
                                 <div id="tempCat"
                                     class="text-[1.1vw] font-bold text-slate-600 
-                                     px-[1vw] text-center">24 °C</div>
+                                     px-[1vw] text-center">...</div>
                             </div>
 
                         </div>
@@ -218,7 +222,7 @@
 
                                 <div id="rhCath"
                                     class="text-[1.1vw] font-bold text-slate-600 
-                                     px-[1vw] text-center">50 %</div>
+                                     px-[1vw] text-center">...</div>
                             </div>
 
                         </div>
@@ -245,7 +249,7 @@
 
                                 <div id="tempMac"
                                     class="text-[1.1vw] font-bold text-slate-600 
-                                     px-[1vw] text-center">24 °C</div>
+                                     px-[1vw] text-center">...</div>
                             </div>
 
                         </div>
@@ -260,7 +264,7 @@
 
                                 <div id="rhMac"
                                     class="text-[1.1vw] font-bold text-slate-600 
-                                     px-[1vw] text-center">50 %</div>
+                                     px-[1vw] text-center">...</div>
                             </div>
 
                         </div>
@@ -274,7 +278,7 @@
             <div class="flex justify-center pt-[3vh]">
                 <div
                     class="block bg-white w-full mx-[1.4vw] h-[34vh] rounded-md"
-                    style="border-width: 1px; border-color:palevioletred; background-color: rgba(209, 148, 245, 0.555);">
+                    style="border-width: 5px; border-color:palevioletred; background-color: rgba(209, 148, 245, 0.555);">
                     <div class="card-header">
                         <h1 class="tittle-product mx-auto"
                             style="color: azure; font-size: 2vh; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">HVAC
@@ -294,7 +298,7 @@
                                 </div>
                                 <div id="Booster"
                                     class="text-[1.1vw] font-bold text-slate-600 px-[1vw]"
-                                    style="text-align: center; font-size: x-large; margin-top: 0.5vh">ON
+                                    style="text-align: center; font-size: x-large; margin-top: 0.5vh">...
                                 </div>
                             </div>
                             <div
@@ -307,7 +311,7 @@
                                 </div>
                                 <div id="Exhaust"
                                     class="text-[1.1vw] font-bold text-slate-600 px-[1vw]"
-                                    style="text-align: center; font-size: x-large; margin-top: 0.5vh">ON
+                                    style="text-align: center; font-size: x-large; margin-top: 0.5vh">...
                                 </div>
                             </div>
 
@@ -323,7 +327,7 @@
                                     class="tittle-product p-[1vw] py-0 text-center pt-[0.1vw]"></h1>
                                 <div id="prefil"
                                     class="text-[1.1vw] font-bold text-slate-600 
-                        px-[1vw] text-center ">75 Pa</div>
+                        px-[1vw] text-center ">...</div>
                             </div>
                         </div>
 
@@ -339,7 +343,7 @@
                                 </h1>
                                 <div id="hepafil"
                                     class="text-[1.1vw] font-bold text-slate-600 
-                        px-[1vw] text-center">75 Pa</div>
+                        px-[1vw] text-center">...</div>
                             </div>
                         </div>
 
@@ -359,7 +363,7 @@
                                 </div>
                                 <div id="Heat1"
                                     class="text-[1.1vw] font-bold text-slate-600 px-[1vw] pb-[0.4vw]"
-                                    style="text-align: center; font-size: x-large; margin-top: 0.5vh">ON
+                                    style="text-align: center; font-size: x-large; margin-top: 0.5vh">...
                                 </div>
                             </div>
 
@@ -375,7 +379,7 @@
                                 </div>
                                 <div id="Heat2"
                                     class="text-[1.1vw] font-bold text-slate-600 px-[1vw] pb-[0.4vw]"
-                                    style="text-align: center; font-size: x-large; margin-top: 0.5vh">ON
+                                    style="text-align: center; font-size: x-large; margin-top: 0.5vh">...
                                 </div>
                             </div>
 
