@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rumah Sakit Harapan Kita</title>
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/boxicons.css">
+        <script src="../js/sweetalert/sweetalert.js"></script>
+    </head>
+
+    <body>
+        <!-- HEADER START -->
+        <!-- <header id="my-header" class="bg-white absolute left-0 z-50 h-[40px]
+        w-[260px] m-[3vh] rounded-md flex justify-center items-center shadow-md"></header> -->
+        <div id="nav-menu" class="relative flex items-center h-screen"></div>
+        <div id="nav-time" class="relative flex items-center h-screen"></div>
+        <!-- HEADER END -->
+
+        <!-- CONTAINER START -->
+        <div class="bg-filter">
+           <!-- 1 -->
+           <div
+           class="flex justify-center items-center gap-x-[1vw] px-[1vw] pt-[42vh]"
+           style="padding-top: 25vh; padding-right: 60vw;">
+
+           <!-- Outdoor Unit 1 -->
+           <div id="exhaust"
+               class="block bg-white w-[8vw] h-[12.6vw] rounded-[0.5vw] p-[0.7vw]"
+               style="padding-top: 0vh; margin-left: 60vw; width: 8vw;">
+               <div class="flex justify-between items-center">
+                   <!-- <h1
+                       class="text-slate-500 font-semibold text-[0.8vw]"
+                       style="font-size: x-small; text-align: center; font-weight: bold;">OUTDOOR
+                       UNIT</h1> -->
+
+               </div>
+
+               <div id="exhaustt" class="block" style="width: 6vw;">
+
+                   <!-- <h1 class="text-slate-500 text-[0.85vw]"
+                       style="font-size: small; color: aliceblue; text-align: center;">Status</h1> -->
+                   <div class="flex justify-center items-center"
+                       style="margin-top: 10%;">
+                       <input id="Exhaust_status" type="number"
+                           class="filter-status" readonly>
+                   </div>
+                   <!-- button -->
+                   <!-- <div
+                       class="flex justify-center items-center gap-x-[0.8vw]"
+                       style="padding-top: 1vh;">
+                       <button onclick="btnStop(this.id)" id="FI3_stop"
+                           class="btn-stop-1">Stop</button>
+                       <button onclick="btnRun(this.id)" id="FI3_run"
+                           class="btn-run-1"
+                           style="background-color: rgb(6 182 212);">Run</button>
+                   </div> -->
+               </div>
+
+           </div>
+
+           <!-- Outdoor Unit 2 -->
+           <div
+               class="block bg-white w-[8vw] h-[12.6vw] rounded-[0.5vw] p-[0.7vw]"
+               style="padding-top: 0vh; margin-left: 10vw;">
+               <div class="flex justify-between items-center">
+                   <!-- <h1
+                       class="text-slate-500 font-semibold text-[0.8vw]"
+                       style="font-size: x-small; text-align: center; font-weight: bold;">OUTDOOR
+                       UNIT</h1> -->
+
+               </div>
+
+               <div id="AutoF3" class="block" style="width: 6vw;">
+
+                   <!-- <h1 class="text-slate-500 text-[0.85vw]"
+                       style="font-size: small; color: aliceblue; text-align: center;">Status</h1> -->
+                   <div class="flex justify-center items-center"
+                       style="margin-top: 10%;">
+                       <input id="Heater1_status" type="number"
+                           class="filter-status" readonly>
+                   </div>
+
+                   <!-- <div
+                       class="flex justify-center items-center gap-x-[0.8vw]"
+                       style="padding-top: 1vh;">
+                       <button onclick="btnStop(this.id)" id="FI3_stop"
+                           class="btn-stop-1">Stop</button>
+                       <button onclick="btnRun(this.id)" id="FI3_run"
+                           class="btn-run-1"
+                           style="background-color: rgb(6 182 212);">Run</button>
+                   </div> -->
+               </div>
+
+           </div>
+           <!-- Outdoor Unit 3 -->
+           <div
+               class="block bg-white w-[8vw] h-[12.6vw] rounded-[0.5vw] p-[0.7vw]"
+               style="padding-top: 0vh; margin-left: 40vw;">
+               <div class="flex justify-between items-center">
+                   <!-- <h1
+                       class="text-slate-500 font-semibold text-[0.8vw]"
+                       style="font-size: x-small; text-align: center; font-weight: bold;">OUTDOOR
+                       UNIT</h1> -->
+
+               </div>
+
+               <div id="AutoF3" class="block" style="width: 6vw;">
+
+                   <!-- <h1 class="text-slate-500 text-[0.85vw]"
+                       style="font-size: small; color: aliceblue; text-align: center;">Status</h1> -->
+                   <div class="flex justify-center items-center"
+                       style="margin-top: 10%;">
+                       <input id="Outdoor_status" type="number"
+                           class="filter-status" readonly>
+                   </div>
+
+                   <!-- <div
+                       class="flex justify-center items-center gap-x-[0.8vw]"
+                       style="padding-top: 1vh;">
+                       <button onclick="btnStop(this.id)" id="FI3_stop"
+                           class="btn-stop-1">Stop</button>
+                       <button onclick="btnRun(this.id)" id="FI3_run"
+                           class="btn-run-1"
+                           style="background-color: rgb(6 182 212);">Run</button>
+                   </div> -->
+               </div>
+
+           </div>
+       </div>
+
+       <!-- 2 -->
+       <div
+           class="flex justify-center items-center gap-x-[1vw] px-[1vw] pt-[42vh]"
+           style="padding-top: 12vh; padding-left: 20vw;">
+
+           <!-- Outdoor Unit 1 -->
+           <div
+               class="block bg-white w-[8vw] h-[12.6vw] rounded-[0.5vw] p-[0.7vw]"
+               style="padding-top: 0vh; margin-right: 10vw; width: 7vw;">
+               <div class="flex justify-between items-center">
+                   <!-- <h1
+                       class="text-slate-500 font-semibold text-[0.8vw]"
+                       style="font-size: x-small; text-align: center; font-weight: bold;">OUTDOOR
+                       UNIT</h1> -->
+
+               </div>
+
+               <div id="AutoF3" class="block" >
+
+                   <!-- <h1 class="text-slate-500 text-[0.85vw]"
+                       style="font-size: small; color: aliceblue; text-align: center;">Status</h1> -->
+                   <div class="flex justify-center items-center"
+                       style="margin-top: 10%;">
+                       <input id="Heater2_status" type="number"
+                           class="filter-status" readonly>
+                   </div>
+
+                   <!-- <div
+                       class="flex justify-center items-center gap-x-[0.8vw]"
+                       style="padding-top: 1vh;">
+                       <button onclick="btnStop(this.id)" id="FI3_stop"
+                           class="btn-stop-1">Stop</button>
+                       <button onclick="btnRun(this.id)" id="FI3_run"
+                           class="btn-run-1"
+                           style="background-color: rgb(6 182 212);">Run</button>
+                   </div> -->
+               </div>
+
+           </div>
+           <!-- Outdoor Unit 2 -->
+           <div
+               class="block bg-white w-[8vw] h-[12.6vw] rounded-[0.5vw] p-[0.7vw]"
+               style="padding-top: 0vh; margin-right: 1vw; width: 7vw;">
+               <div class="flex justify-between items-center">
+                   <!-- <h1
+                       class="text-slate-500 font-semibold text-[0.8vw]"
+                       style="font-size: x-small; text-align: center; font-weight: bold;">OUTDOOR
+                       UNIT</h1> -->
+
+               </div>
+
+               <div id="AutoF3" class="block">
+
+                   <!-- <h1 class="text-slate-500 text-[0.85vw]"
+                       style="font-size: small; color: aliceblue; text-align: center;">Status</h1> -->
+                   <div class="flex justify-center items-center"
+                       style="margin-top: 10%;">
+                       <input id="Booster_status" type="number"
+                           class="filter-status" readonly>
+                   </div>
+
+                   <!-- <div
+                       class="flex justify-center items-center gap-x-[0.8vw]"
+                       style="padding-top: 1vh;">
+                       <button onclick="btnStop(this.id)" id="FI3_stop"
+                           class="btn-stop-1">Stop</button>
+                       <button onclick="btnRun(this.id)" id="FI3_run"
+                           class="btn-run-1"
+                           style="background-color: rgb(6 182 212);">Run</button>
+                   </div> -->
+               </div>
+
+           </div>
+
+           <div
+               class="block bg-white w-[8vw] h-[12.6vw] rounded-[0.5vw] p-[0.7vw]"
+               style="padding-top: 0vh; margin-left: 1vw; width: 7vw;">
+               <div class="flex justify-between items-center">
+                   <!-- <h1
+                       class="text-slate-500 font-semibold text-[0.8vw]"
+                       style="font-size: x-small; text-align: center; font-weight: bold;">OUTDOOR
+                       UNIT</h1> -->
+
+               </div>
+
+               <div id="AutoF3" class="block">
+
+                   <!-- <h1 class="text-slate-500 text-[0.85vw]"
+                       style="font-size: small; color: aliceblue; text-align: center;">Status</h1> -->
+                   <div class="flex justify-center items-center"
+                       style="margin-top: 10%;">
+                       <input id="Filter_status" type="number"
+                           class="filter-status" readonly>
+                   </div>
+                   <!-- button -->
+                   <!-- <div
+                       class="flex justify-center items-center gap-x-[0.8vw]"
+                       style="padding-top: 1vh;">
+                       <button onclick="btnStop(this.id)" id="FI3_stop"
+                           class="btn-stop-1">Stop</button>
+                       <button onclick="btnRun(this.id)" id="FI3_run"
+                           class="btn-run-1"
+                           style="background-color: rgb(6 182 212);">Run</button>
+                   </div> -->
+               </div>
+
+           </div>
+
+           <div
+               class="block bg-white w-[8vw] h-[12.6vw] rounded-[0.5vw] p-[0.7vw]"
+               style="padding-top: 0vh; margin-left: 12vw; width: 7vw;">
+               <div class="flex justify-between items-center">
+                   <!-- <h1
+                       class="text-slate-500 font-semibold text-[0.8vw]"
+                       style="font-size: x-small; text-align: center; font-weight: bold;">OUTDOOR
+                       UNIT</h1> -->
+
+               </div>
+
+               <div id="AutoF3" class="block">
+
+                   <!-- <h1 class="text-slate-500 text-[0.85vw]"
+                       style="font-size: small; color: aliceblue; text-align: center;">Status</h1> -->
+                   <div class="flex justify-center items-center"
+                       style="margin-top: 10%;">
+                       <input id="HEPA_status" type="number"
+                           class="filter-status" readonly>
+                   </div>
+                   <!-- button -->
+                   <!-- <div
+                       class="flex justify-center items-center gap-x-[0.8vw]"
+                       style="padding-top: 1vh;">
+                       <button onclick="btnStop(this.id)" id="FI3_stop"
+                           class="btn-stop-1">Stop</button>
+                       <button onclick="btnRun(this.id)" id="FI3_run"
+                           class="btn-run-1"
+                           style="background-color: rgb(6 182 212);">Run</button>
+                   </div> -->
+               </div>
+
+           </div>
+       </div>
+
+       <!-- Machine Room -->
+       <div
+           class="flex justify-center items-center mx-[2vw] gap-x-[1vw] pt-[1vw]"
+           style="padding-top: 23vh; margin-left: 2vw; height: 20vh;">
+           <div
+               class="flex justify-center items-center  w-1/2 h-[5vw] rounded-md bg-opacity-65 px-[0.7vw]"
+               style="height: 25vh; width: 37vw; margin-left: 0vw; ">
+               <!-- <div class="tittle-product w-1/3"
+                   style="font-size: 3vh; margin-left:1vw;"> MACHINE ROOM
+               </div> -->
+               <div
+                   class="bg-transparent w-full flex justify-start items-center gap-x-[0.4vw]"
+                   style="margin-left: 5.5vw;">
+                   <div
+                       class="flex justify-center items-center  w-1/2 rounded-[0.3vw] py-[0.5vw]">
+                       <i
+                           class='bx bx-chevron-right bx-flashing bx-md-1 gradient-text'></i>
+                       <div class="block text-left"
+                           style="color: aliceblue; text-align: center;">
+                           <h1 class="text-[1vw] text-slate-500"
+                               style="font-size: 1vw;">Temperature
+                               [T]</h1>
+                           <div id="TBDSAa"
+                               class="text-[0.8vw] font-bold text-slate-500"
+                               style="font-size: 10vh;">24<span>°C</span></div>
+                       </div>
+                   </div>
+                   <div
+                       class="flex justify-center items-center  w-1/2 rounded-[0.3vw] py-[0.5vw]">
+                       <i
+                           class='bx bx-chevron-right bx-flashing bx-md-1 gradient-text'></i>
+                       <div class="block text-left"
+                           style="color: aliceblue; text-align: center;">
+                           <h1 class="text-[1vw] text-slate-500"
+                               style="font-size: 1vw;">Relative Humidity
+                               [RH]</h1>
+                           <div id="TBDSBb"
+                               class="text-[0.8vw] font-bold text-slate-500"
+                               style="font-size: 10vh;">50<span>%</span></div>
+                       </div>
+                   </div>
+               </div>
+
+           </div>
+
+           <div
+               class="flex justify-center items-center  w-1/2 h-[5vw] rounded-md bg-opacity-65 px-[0.7vw]"
+               style="height: 25vh; width: 25vw;">
+               <!-- <div class="tittle-product w-1/3"
+                   style="font-size: 3vh; margin-left:1vw; margin-right:1vw;">
+                   SETTING </div> -->
+               <div
+                   class="bg-transparent w-full flex justify-start items-center gap-x-[0.8vw]"
+                   style="margin-left: 0.0vw;">
+                   <div
+                       class="flex justify-center items-center w-1/2 rounded-[0.3vw] py-[0.5vw]">
+                       <div class="block text-left">
+                           <button onclick="changeTemperature(1)"
+                               class="btn-submit-1"
+                               style="background-color: azure; width: 10vw; height: 7vh;">
+                               <i
+                                   class='bx bx-chevron-up bx-flashing bx-md-1 gradient-text'></i>
+                           </button>
+                           <h1 class="text-[0.8vw] text-slate-500"
+                               style="font-size: 1.2vh; text-align: center; margin-top: 1vh;">Temperature
+                               [T]</h1>
+                           <div id="TBDSA"
+                               class="text-[0.8vw] font-bold text-slate-500"
+                               style="font-size: 5vh; text-align: center;">23<span>°C</span></div>
+                           <button onclick="changeTemperature(-1)"
+                               class="btn-submit-1"
+                               style="background-color: azure; width: 10vw; height: 7vh;">
+                               <i
+                                   class='bx bx-chevron-down bx-flashing bx-md-1 gradient-text'></i>
+                           </button>
+                       </div>
+                   </div>
+                   <div
+                       class="flex justify-center items-center w-1/2 rounded-[0.3vw] py-[0.5vw]">
+                       <div class="block text-left">
+                           <button onclick="changeRH(1)"
+                               class="btn-submit-1"
+                               style="background-color: azure; width: 10vw; height: 7vh;">
+                               <i
+                                   class='bx bx-chevron-up bx-flashing bx-md-1 gradient-text'></i>
+                           </button>
+                           <h1 class="text-[0.8vw] text-slate-500"
+                               style="font-size: 1.2vh; text-align: center; margin-top: 1vh;">Relative
+                               Humidity (RH)</h1>
+                           <div id="TBDSBRH"
+                               class="text-[0.8vw] font-bold text-slate-500"
+                               style="font-size: 5vh; text-align: center;">50<span>%</span></div>
+                           <button onclick="changeRH(-1)"
+                               class="btn-submit-1"
+                               style="background-color: azure; width: 10vw; height: 7vh;">
+                               <i
+                                   class='bx bx-chevron-down bx-flashing bx-md-1 gradient-text'></i>
+                           </button>
+                       </div>
+                   </div>
+               </div>
+
+           </div>
+
+       </div>
+
+        </div>
+        <!-- CONTAINER END -->
+
+        <!-- LOAD JS FILE -->
+        <script src="../js/overview.js"></script>
+        <script src="../js/nav-menu.js"></script>
+    </body>
+
+</html>
